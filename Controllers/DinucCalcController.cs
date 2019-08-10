@@ -23,7 +23,7 @@ namespace DinucMVC.Controllers
             //Seq partial output
             if (Sequence.Seq.Length > 32)
             {
-                ViewData["seq"] = "1 " + Sequence.Seq.Substring(0, 16) + " ..... " + Sequence.Seq.Substring(Sequence.Seq.Length - 16) + " " + Sequence.Seq.Length;
+                ViewData["seq"] = "1 " + Sequence.Seq.Substring(0, 16) + " ........ " + Sequence.Seq.Substring(Sequence.Seq.Length - 16) + " " + Sequence.Seq.Length;
             }
             else
             {
