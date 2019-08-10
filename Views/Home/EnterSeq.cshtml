@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "EnterSeq";
+}
+
+<h1>EnterSeq</h1>
+
+<div class="container form-group">
+    <form method="post">
+        <textarea class="form-control" name="inputSeq" rows="5" cols="100"></textarea>
+        <p></p>
+        <button class="nav-link text-dark" asp-area="" asp-controller="DinucCalc" asp-action="Dinuc">Calculate</button>
+    </form>
+
+    <p></p><h5>@ViewData["nucTest"]</h5>
+    <p></p><h5>Seq</h5> @ViewData["seq"]
+</div>
+
