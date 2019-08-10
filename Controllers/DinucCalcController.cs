@@ -16,18 +16,18 @@ namespace DinucMVC.Controllers
             SeqTest seqTest = new SeqTest();
             if (seqTest.SeqNucTest(Sequence.Seq) == false)
             {
-                ViewData["nucTest"] = "Use a, c, g, t only.";
+                ViewBag.Message = "Use a c g t only";
                 return View();
             }
 
             //Seq partial output
             if (Sequence.Seq.Length > 32)
             {
-                ViewData["seq"] = "1 " + Sequence.Seq.Substring(0, 16) + " ........ " + Sequence.Seq.Substring(Sequence.Seq.Length - 16) + " " + Sequence.Seq.Length;
+                ViewBag.Seq = "1 " + Sequence.Seq.Substring(0, 16) + " ........ " + Sequence.Seq.Substring(Sequence.Seq.Length - 16) + " " + Sequence.Seq.Length;
             }
             else
             {
-                ViewData["seq"] = "1 " + Sequence.Seq + " " + Sequence.Seq.Length;
+                ViewBag.Seq = "1 " + Sequence.Seq + " " + Sequence.Seq.Length;
             }
 
             return View();
