@@ -6,7 +6,7 @@ namespace DinucMVC.Controllers
 {
     public class DinucCalcController : Controller
     {
-        public ActionResult Dinuc()
+        public IActionResult Dinuc()
         {
             // Get seq from input in Form Textarea and put it to lower case.
             Sequence.Seq = Request.Form["inputSeq"].ToString();
@@ -17,6 +17,11 @@ namespace DinucMVC.Controllers
             string testReturn = seqTest.SeqNucTest(Sequence.Seq);
 
             ViewBag.TestReturn = testReturn;
+
+            //
+            DinucTable dinucTable = new DinucTable();
+
+            ViewBag.DiTable = dinucTable;
 
             return View();
         }

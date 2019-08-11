@@ -4,6 +4,34 @@
 }
 
 <h1>DinucCalc</h1>
-@*@ViewBag.Seq*@
-@ViewBag.testReturn
+
+<b>@ViewBag.testReturn</b>
+@*@ViewBag.DiTable*@
+
+<p></p>
+
+<table class="table">
+    <thead>
+        <tr class="row">
+            @foreach(var item in ViewBag.DiTable.Dinuc)
+            {
+                <th class="col-sm-16">@item</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row">
+            @foreach (var item in ViewBag.DiTable.DinucCount)
+            {
+                <td class="col-sm-16">@item</td>
+            }
+        </tr>
+        <tr class="row">
+            @foreach (var item in ViewBag.DiTable.DinucFrq)
+            {
+                <td class="col-sm-16">@item</td>
+            }
+        </tr>
+    </tbody>
+</table>
 

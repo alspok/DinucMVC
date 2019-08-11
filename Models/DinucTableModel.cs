@@ -11,7 +11,7 @@ namespace DinucMVC.Models
                                                "ca", "cc", "cg", "ct",
                                                "ga", "gc", "gg", "gt",
                                                "ta", "tc", "tg", "tt"};
-        public int[] DinucCount { get; set; } = new int[16];
-        public double[] DinucFrq { get; set; } = new double[16];
+        public int[] DinucCount { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        public double[] DinucFrq { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     }
 }
