@@ -7,16 +7,22 @@ namespace DinucMVC.Helpers
 {
     public class SeqTest
     {
-        public bool SeqNucTest(string seq)
+        public string SeqNucTest(string seq)
         {
             char[] seqCharArray = seq.ToCharArray();
 
             foreach(var seqChar in seqCharArray)
             {
                 if (seqChar != 'a' && seqChar != 'c' && seqChar != 'g' && seqChar != 't')
-                    return false;
+                {
+                    return "Use a c g t only";
+                }
             }
-            return true;
+
+            if (seq.Length < 64)
+                return "1 " + seq + " " + seq.Length + " bp";
+            else
+                return "1 " + seq.Substring(0, 64) + " ..... " + seq.Length + " bp";
         }
     }
 }

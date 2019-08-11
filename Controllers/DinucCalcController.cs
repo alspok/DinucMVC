@@ -14,25 +14,11 @@ namespace DinucMVC.Controllers
 
             //Seq test for a, c, g, t only.
             SeqTest seqTest = new SeqTest();
-            if (seqTest.SeqNucTest(Sequence.Seq) == false)
-            {
-                ViewBag.Message = "Use a c g t only";
-                return View();
-            }
+            string testReturn = seqTest.SeqNucTest(Sequence.Seq);
 
-            //Seq partial output
-            if (Sequence.Seq.Length > 32)
-            {
-                ViewBag.Seq = "1 " + Sequence.Seq.Substring(0, 16) + " ........ " + Sequence.Seq.Substring(Sequence.Seq.Length - 16) + " " + Sequence.Seq.Length;
-            }
-            else
-            {
-                ViewBag.Seq = "1 " + Sequence.Seq + " " + Sequence.Seq.Length;
-            }
+            ViewBag.TestReturn = testReturn;
 
             return View();
         }
-
-
     }
 }
