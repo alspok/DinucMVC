@@ -7,7 +7,6 @@ namespace DinucMVC.Models
 {
     public class DinucTable
     {
-
         public string[] Dinuc { get; set; } = {"aa", "ac", "ag", "at",
                                                "ca", "cc", "cg", "ct",
                                                "ga", "gc", "gg", "gt",
