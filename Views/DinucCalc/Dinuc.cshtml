@@ -5,7 +5,7 @@
 
 <h1>DinucCalc</h1>
 
-<b>@ViewBag.testReturn</b>
+<a>@ViewBag.testReturn</a>
 @*@ViewBag.DiTable*@
 
 <p></p>
@@ -15,7 +15,7 @@
         <tr class="row">
             @foreach(var item in ViewBag.DiTable.Dinuc)
             {
-                <th class="col-sm-20">@item</th>
+                <th style="width: 6.25%">@item</th>
             }
         </tr>
     </thead>
@@ -23,13 +23,13 @@
         <tr class="row">
             @foreach (var item in ViewBag.DiTable.DinucCount)
             {
-                <td class="col-sm-16">@item</td>
+                <td style="width: 6.25%">@item</td>
             }
         </tr>
         <tr class="row">
             @foreach (var item in ViewBag.DiTable.DinucFrq)
             {
-                <td class="col-sm-16">@item</td>
+                <td style="width: 6.25%">@item</td>
             }
         </tr>
     </tbody>
