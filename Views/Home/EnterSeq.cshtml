@@ -3,16 +3,13 @@
     ViewData["Title"] = "EnterSeq";
 }
 
-<h1>EnterSeq</h1>
+<h2>EnterSeq</h2>
 
 <div class="container form-group">
-    <form method="post">
+    <form action="" method="post">
         <textarea class="form-control" name="inputSeq" rows="5" cols="100"></textarea>
         <p></p>
-        <button class="nav-link text-dark" asp-area="" asp-controller="DinucCalc" asp-action="Dinuc">Calculate</button>
+        <input type="submit" value="Calculate" class="nav-link btn-sm text-dark " asp-controller="DinucCalc" asp-action="Dinuc" />
     </form>
-
-    <p></p><h5>@ViewData["nucTest"]</h5>
-    <p></p><h5>Seq</h5> @ViewData["seq"]
 </div>
 
