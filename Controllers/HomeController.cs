@@ -22,8 +22,9 @@ namespace DinucMVC.Controllers
 
         public IActionResult EnterGBSeq()
         {
-            Sequence.Seq = "aaacagatcacccgctgagcgggttatctgtt";
-            ViewBag.Seq = Sequence.Seq;
+            Sequence sequence = new Sequence();
+            sequence.Seq = "aaacagatcacccgctgagcgggttatctgtt";
+            ViewBag.Seq = sequence.Seq;
 
             return View();
         }

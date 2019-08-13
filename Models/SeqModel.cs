@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace DinucMVC.Models
 {
-    public static class Sequence
+    public class Sequence
     {
-        public static string Seq { get; set; }
+        public string Seq { get; set; }
     }
 }
