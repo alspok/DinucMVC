@@ -3,11 +3,11 @@
     ViewData["Title"] = "DinucCalc";
 }
 
-<h1>DinucCalc</h1>
+<h5>DinucCalc</h5>
 
 <a>@ViewBag.testReturn</a>
 
-<p></p>
+<br />
 
 <table class="table">
     <thead>
@@ -20,16 +20,31 @@
     </thead>
     <tbody>
         <tr class="row">
-            @foreach (var item in ViewBag.DiTable.DinucCount)
+            @foreach (var item in ViewBag.DiTable.DinucCountFirstFrame)
             {
                 <td style="width: 6.25%">@item</td>
             }
         </tr>
         <tr class="row">
-            @foreach (var item in ViewBag.DiTable.DinucFrq)
+            @foreach (var item in ViewBag.DiTable.DinucCountSecondFrame)
             {
                 <td style="width: 6.25%">@item</td>
             }
+        </tr>
+        <tr class="row">
+            @foreach (var item in ViewBag.DiTable.DinucFrqFirstFrame)
+            {
+                <td style="width: 6.25%">@item</td>
+            }
+        </tr>
+        <tr class="row">
+            @foreach (var item in ViewBag.DiTable.DinucFrqSecondFrame)
+            {
+                <td style="width: 6.25%">@item</td>
+            }
+        </tr>
+        <tr class="row">
+            <a>Diff: @ViewBag.DiTable.DinucFrqDiff</a>
         </tr>
     </tbody>
 </table>

@@ -19,7 +19,9 @@ namespace DinucMVC.Controllers
             ViewBag.TestReturn = seqTest.SeqNucTest(sequence.Seq);
 
             //Calculate dinuc frequencies in two frames
-            DinucCalculation dinucCalculation = new DinucCalculation(new DinucleotideTable(), sequence.Seq);
+            DinucleotideTable dinucleotideTable = new DinucleotideTable();
+
+            DinucCalculation dinucCalculation = new DinucCalculation(dinucleotideTable, sequence.Seq);
             var dinucFirstFrameList = dinucCalculation.SubseqListFirstFrame();
             var dinucSecondFrameList = dinucCalculation.SubseqListSecondFrame();
 
@@ -27,8 +29,10 @@ namespace DinucMVC.Controllers
             dinucCalculation.DinucCalc(dinucFirstFrameList, "1st");
             dinucCalculation.DinucCalc(dinucSecondFrameList, "2nd");
 
-            //DinucTable dinucTable = new DinucTable();
-            //ViewBag.DiTable = dinucTable;
+            //
+            dinucCalculation.DinucFrqDiffCalc();
+
+            ViewBag.DiTable = dinucleotideTable;
 
             return View();
         }

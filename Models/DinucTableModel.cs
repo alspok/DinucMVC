@@ -15,5 +15,6 @@ namespace DinucMVC.Models
         public int[] DinucCountSecondFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public double[] DinucFrqFirstFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public double[] DinucFrqSecondFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        public double DinucFrqDiff { get; set; } = 0;
     }
 }
