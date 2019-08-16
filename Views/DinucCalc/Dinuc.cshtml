@@ -12,7 +12,7 @@
 <table class="table">
     <thead>
         <tr class="row">
-            @foreach(var item in ViewBag.DiTable.Dinuc)
+            @foreach (var item in ViewBag.DiTable.Dinuc)
             {
                 <th style="width: 6.25%">@item</th>
             }
@@ -44,7 +44,7 @@
             }
         </tr>
         <tr class="row">
-            <a>Diff: @ViewBag.DiTable.DinucFrqDiff</a>
+            Dinuc frequences diff: @ViewBag.DiTable.DinucFrqDiff
         </tr>
     </tbody>
 </table>
