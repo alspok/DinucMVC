@@ -1,6 +1,7 @@
 ﻿using DinucMVC.Models;
 using System;
 using System.Collections.Generic;
+using DinucMVC.Helpers;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -34,6 +35,7 @@ namespace DinucMVC.Calculation
             while (length != 0)
             {
                 subseqList.Add(circleSequence.Substring(0, 1) + circleSequence.Substring(1, 1));
+
                 circleSequence = circleSequence.Substring(2);
                 length -= 1;
             }
@@ -70,6 +72,18 @@ namespace DinucMVC.Calculation
             {
                 foreach(var item2 in dinucList)
                 {
+                    if(frame == "1st" && Array.IndexOf(this.dinucTable.Dinuc, item2) == -1)
+                    {
+                        this.dinucTable.NoMachDinucFirstFrame += 1;
+                        continue;
+                    }
+
+                    if (frame == "2nd" && Array.IndexOf(this.dinucTable.Dinuc, item2) == -1)
+                    {
+                        this.dinucTable.NoMachDinucSecondFrame += 1;
+                        continue;
+                    }
+
                     if ((item1 == item2) && (frame == "1st"))
                     {
                         this.dinucTable.DinucCountFirstFrame[i]++;

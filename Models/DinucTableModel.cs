@@ -11,6 +11,8 @@ namespace DinucMVC.Models
                                                "ca", "cc", "cg", "ct",
                                                "ga", "gc", "gg", "gt",
                                                "ta", "tc", "tg", "tt"};
+        public int NoMachDinucFirstFrame { get; set; } = 0;
+        public int NoMachDinucSecondFrame { get; set; } = 0;
         public int[] DinucCountFirstFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         public int[] DinucCountSecondFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         public double[] DinucFrqFirstFrame { get; set; } = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
