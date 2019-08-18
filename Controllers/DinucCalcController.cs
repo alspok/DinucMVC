@@ -15,9 +15,9 @@ namespace DinucMVC.Controllers
             sequence.Seq = sequence.Seq.ToLower();
 
             //Seq test for a, c, g, t only.
-            SeqTest seqTest = new SeqTest();
-            ViewBag.TestReturn = seqTest.SeqNucTest(sequence.Seq);
-
+            //SeqTest seqTest = new SeqTest();
+            //ViewBag.TestReturn = seqTest.SeqNucTest(sequence.Seq);
+            ViewBag.TestReturn = SeqTest.SeqNucTest(sequence.Seq);
             //Calculate dinuc frequencies in two frames
             DinucleotideTable dinucleotideTable = new DinucleotideTable();
 

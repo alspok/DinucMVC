@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace DinucMVC.Helpers
 {
-    public class SeqTest
+    public static class SeqTest
     {
-        public string SeqNucTest(string seq)
+        public static string SeqNucTest(string seq)
         {
             char[] seqCharArray = seq.ToCharArray();
 
@@ -23,6 +23,13 @@ namespace DinucMVC.Helpers
                 return "1 " + seq + " " + seq.Length + " bp";
             else
                 return "1 " + seq.Substring(0, 64) + " ..... " + seq.Length + " bp";
+        }
+
+        public static bool SeqDinucTest()
+        {
+
+
+            return true;
         }
     }
 }
